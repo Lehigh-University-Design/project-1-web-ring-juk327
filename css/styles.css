@@ -1,0 +1,142 @@
+:root {
+    --cream: #fdf8e2;
+    --light-purple: #c4c3e3;
+    --dark-purple: #504e76;
+    --yellow: #fcdd9d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    margin: 7px;
+}
+
+header {
+    background-color: var(--light-purple);
+    text-align: center;
+    padding: .5em 1em;
+    border-radius: 10px;
+    
+    font-family: "gambado-sans-forte", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--dark-purple);
+    font-size: 3em;
+
+     h2 {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    p {
+        font-family: "mundial", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+}
+
+/* ziclets font */
+
+    /* font-family: "ziclets", sans-serif;
+        font-weight: 250;
+        font-style: normal;
+        color: var(--dark-purple);
+        margin-top: 20px;
+        font-size: 2.5em; */
+    
+.navbar {
+    background-color: var(--dark-purple);
+    margin-bottom: .5em;
+    padding: .5em 1em;
+    border-radius: 10px;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    ul{
+        list-style-type: none;
+        background-color: var(--dark-purple);
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+
+        color: var(--cream);
+        font-family: "mundial", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1.2em;
+    }
+
+    a:hover {
+        background-color: var(--yellow);
+        color: var(--dark-purple);
+        border-radius: 10px;
+    }
+    
+    li {
+        float: left;
+    }
+}
+
+main {
+    position: relative;
+    max-width: auto;
+    margin: 20px;
+    font-family: "mundial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aboutme {
+    background-color: var(--yellow);
+    color:var(--dark-purple);
+    margin-bottom: 1em;
+    padding: .5em 1em;
+    border-radius: 10px;
+    width: 22%;
+    float: left
+
+}
+
+.currentwatch {
+    background-color: var(--yellow);
+    color:var(--dark-purple);
+    margin-bottom: 1em;
+    padding: .5em 1em;
+    border-radius: 10px;
+
+    width: 22%;
+}
+
+footer {
+    background-color: var(--dark-purple);
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: .5em;
+    padding: .5em 1em;
+    justify-content: center;
+
+    font-family: "mundial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--cream);
+    font-size: 1em;
+
+    display: block;
+    clear: both;
+}
