@@ -3,6 +3,7 @@
     --light-purple: #c4c3e3;
     --dark-purple: #504e76;
     --yellow: #fcdd9d;
+    --green: #a3b565;
 }
 
 * {
@@ -13,6 +14,25 @@ body {
     background-color: var(--cream);
     margin: 7px;
 }
+
+/* Floating icons animation */
+
+.floating-icon {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.4;
+  animation: floatUp 8s infinite linear;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+  }
+}
+
 
 header {
     background-color: var(--light-purple);
@@ -27,8 +47,12 @@ header {
     font-size: 3em;
 
      h2 {
-        margin-top: 0;
-        padding-top: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    #title {
+        margin-bottom: 65px;
     }
 
     p {
@@ -94,34 +118,130 @@ header {
 }
 
 main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
     position: relative;
     max-width: auto;
     margin: 20px;
     font-family: "mundial", sans-serif;
-    font-weight: 400;
     font-style: normal;
+    /* font-weight: 400; */
+}
+ 
+
+.sidebar {
+    width: 30%;
+
+    .aboutme {
+        background-color: var(--yellow);
+        color:var(--dark-purple);
+        margin-bottom: 20px;
+        padding: 1em;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3)
+
+    }
+
+    .recentwatch {
+        background-color: var(--yellow);
+        color:var(--dark-purple);
+        margin-bottom: 20px;
+        padding: 1em;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3)
+
+    }
 }
 
-.aboutme {
-    background-color: var(--yellow);
-    color:var(--dark-purple);
-    margin-bottom: 1em;
-    padding: .5em 1em;
+.maincontent {
+    width: 70%;
+    text-align: center;
+    font-size: 2em;
+
+    .movie-container {
+    width: 100%;
+    background-color: var(--green);
+    color:var(--cream);
+    margin-bottom: 20px;
+    padding: 1em;
     border-radius: 10px;
-    width: 22%;
-    float: left
 
-}
+    display: inline-block;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3)
+    }
 
-.currentwatch {
-    background-color: var(--yellow);
-    color:var(--dark-purple);
-    margin-bottom: 1em;
-    padding: .5em 1em;
+        .movie-container:hover {
+            background-color: var(--yellow);
+            color: var(--dark-purple);
+            border-radius: 10px;
+              /* Custom cursor */
+            cursor: url("../assets/3d-glasses.png"), pointer;
+        }
+        .movie-container-hovertext {
+            transition: color 0.3s ease;
+            overflow: hidden;
+        }
+
+    .tvshows-container {
+    width: 100%;
+    background-color: var(--green);
+    color:var(--cream);
+    margin-bottom: 20px;
+    padding: 1em;
     border-radius: 10px;
 
-    width: 22%;
+    display: inline-block;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3)
+    }
+         .tvshows-container:hover {
+            background-color: var(--yellow);
+            color: var(--dark-purple);
+            border-radius: 10px;
+              /* Custom cursor */
+            cursor: url("../assets/tv-show-cursor.png"), pointer;
+        }
+
+    .news-container {
+    width: 100%;
+    background-color: var(--green);
+    color:var(--cream);
+    margin-bottom: 20px;
+    padding: 1em;
+    border-radius: 10px;
+
+    display: inline-block;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3)
+    }
+         .news-container:hover {
+            background-color: var(--yellow);
+            color: var(--dark-purple);
+            border-radius: 10px;
+              /* Custom cursor */
+            cursor: url("../assets/megaphone.png"), pointer;
+        }
+
+    .mylist-container {
+    width: 100%;
+    background-color: var(--green);
+    color:var(--cream);
+    margin-bottom: 20px;
+    padding: 1em;
+    border-radius: 10px;
+
+    display: inline-block;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3)
+    }
+        .mylist-container:hover {
+            background-color: var(--yellow);
+            color: var(--dark-purple);
+            border-radius: 10px;
+              /* Custom cursor */
+            cursor: url("../assets/girl.png"), pointer;
+        }
 }
+
 
 footer {
     background-color: var(--dark-purple);
@@ -138,5 +258,5 @@ footer {
     font-size: 1em;
 
     display: block;
-    clear: both;
+    clear: both; 
 }
