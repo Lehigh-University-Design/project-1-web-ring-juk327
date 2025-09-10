@@ -179,10 +179,6 @@ main {
               /* Custom cursor */
             cursor: url("../assets/3d-glasses.png"), pointer;
         }
-        .movie-container-hovertext {
-            transition: color 0.3s ease;
-            overflow: hidden;
-        }
 
     .tvshows-container {
     width: 100%;
